@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour {
      */
 
     public int health;
+    public int damage;
     public GameObject deathEffect;
 
     private void Update() {
@@ -24,4 +25,17 @@ public class Enemy : MonoBehaviour {
     public void TakeDamage(int damage) {
         health -= damage;
     }
+
+
+    void OnTriggerEnter2D(Collider2D collision) {
+
+        if (collision.CompareTag("Player")) {
+
+            collision.GetComponent<PlayerController>().playerHealth -= damage;
+
+        }
+
+    }
+
+
 }

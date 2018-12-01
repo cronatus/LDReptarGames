@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//https://www.youtube.com/watch?v=bY4Hr2x05p8
+
 public class MouseWeapon : MonoBehaviour {
 
     public float offset;

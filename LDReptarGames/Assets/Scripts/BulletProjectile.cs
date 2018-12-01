@@ -28,7 +28,7 @@ public class BulletProjectile : MonoBehaviour {
     private void Update() {
         RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.up, distance, whatIsSolid);
         if(hitInfo.collider != null) {
-            if(hitInfo.collider.CompareTag("Enemy")) {
+            if(hitInfo.collider.CompareTag("EnemyHitbox")) {
                 Debug.Log("ENEMY MUST TAKE DAMAGE!");
             }
             DestroyBulletProjectile();
