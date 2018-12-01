@@ -9,6 +9,10 @@ public class PlayerController : MonoBehaviour {
     private Rigidbody2D rb;
     private Vector2 moveVelocity;
 
+    //camera to follow player
+    //public Transform player;
+    //public Vector3 offset;
+
     void Start() {
 
         rb = GetComponent<Rigidbody2D>();   
@@ -16,6 +20,8 @@ public class PlayerController : MonoBehaviour {
     }
 
     void Update() {
+        //the camera will follow the player but it will follow the player in a certain offset position
+        //transform.position = new Vector3(player.position.x + offset.x, player.position.y + offset.y, offset.z);
 
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         moveVelocity = moveInput.normalized * speed;
