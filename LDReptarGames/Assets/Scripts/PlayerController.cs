@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour {
 
     public int playerHealth; //Player's health
 
-    public float speed;
+    public float speed; // The base speed of the player
 
     private Rigidbody2D rb;
     private Vector2 moveVelocity;
@@ -19,8 +19,8 @@ public class PlayerController : MonoBehaviour {
 
     void Update() {
 
-        Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        moveVelocity = moveInput.normalized * speed;
+        Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")); // Detect directional input from either WASD or the ARROW KEYS to determine the intended movemenet of the player
+        moveVelocity = moveInput.normalized * speed; // Move the player according to the input above
 
     }
 
