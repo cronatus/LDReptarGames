@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
+    public int playerHealth; //Player's health
+
     public float speed;
 
     private Rigidbody2D rb;
     private Vector2 moveVelocity;
-
-    //camera to follow player
-    //public Transform player;
-    //public Vector3 offset;
 
     void Start() {
 
@@ -20,8 +18,6 @@ public class PlayerController : MonoBehaviour {
     }
 
     void Update() {
-        //the camera will follow the player but it will follow the player in a certain offset position
-        //transform.position = new Vector3(player.position.x + offset.x, player.position.y + offset.y, offset.z);
 
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         moveVelocity = moveInput.normalized * speed;
@@ -33,5 +29,4 @@ public class PlayerController : MonoBehaviour {
         rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
 
     }
-
 }
