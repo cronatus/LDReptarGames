@@ -26,7 +26,7 @@ public class BulletProjectile : MonoBehaviour {
     }
 
     private void Update() {
-        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, distance, whatIsSolid);
+        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.up, distance, whatIsSolid);
         if(hitInfo.collider != null) {
             if(hitInfo.collider.CompareTag("Enemy")) {
                 Debug.Log("ENEMY MUST TAKE DAMAGE!");
@@ -35,7 +35,7 @@ public class BulletProjectile : MonoBehaviour {
         }
 
 
-        transform.Translate(transform.up * speed * Time.deltaTime);
+        transform.Translate(Vector2.up * speed * Time.deltaTime);
     }
 
     void DestroyBulletProjectile() {
