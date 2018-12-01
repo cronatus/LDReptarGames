@@ -578,6 +578,7 @@ GameObject:
   - component: {fileID: 1814215674}
   - component: {fileID: 1814215677}
   - component: {fileID: 1814215676}
+  - component: {fileID: 1814215678}
   m_Layer: 0
   m_Name: spr_Player
   m_TagString: Player
@@ -676,6 +677,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+--- !u!70 &1814215678
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1814215673}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0024562299, y: -0.031930976}
+  m_Size: {x: 0.15297666, y: 0.25613806}
+  m_Direction: 0
 --- !u!1 &1853948500
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,6 +702,8 @@ GameObject:
   - component: {fileID: 1853948503}
   - component: {fileID: 1853948502}
   - component: {fileID: 1853948501}
+  - component: {fileID: 1853948505}
+  - component: {fileID: 1853948504}
   m_Layer: 0
   m_Name: spr_Enemy
   m_TagString: Untagged
@@ -764,6 +782,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1853948504
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1853948500}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.1964648
+--- !u!70 &1853948505
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1853948500}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.01}
+  m_Size: {x: 0.17515336, y: 0.30475312}
+  m_Direction: 0
 --- !u!1 &2064012052
 GameObject:
   m_ObjectHideFlags: 0
