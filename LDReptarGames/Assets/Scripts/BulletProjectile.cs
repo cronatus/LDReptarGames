@@ -14,13 +14,15 @@ public class BulletProjectile : MonoBehaviour {
     public float lifeTime;
 
     public float distance; //set distance in inspector to roughly 0.5
+    public int damage; //set damage in inspector to be 0.5 or 1
     public LayerMask whatIsSolid;
 
     public GameObject destroyEffect;
 
+
     private void Start()
     {
-        Invoke("DestroyProjectile", lifeTime);
+        Invoke("DestroyBulletProjectile", lifeTime);
     }
 
     private void Update() {
