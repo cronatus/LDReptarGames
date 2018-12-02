@@ -18,7 +18,8 @@ public class Enemy : MonoBehaviour {
     private void Update() {
         if (health <= 0) {
             Instantiate(deathEffect, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            Debug.Log("YOU HAVE BEEN DESTROYED");
+            Destroy(transform.parent.gameObject);
         }
     }
 
