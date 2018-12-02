@@ -15,7 +15,7 @@ public class BasicEnemyController : MonoBehaviour {
     public Transform[] moveSpots;  // the spots indicated as movement locations for the enemies
     private int randomSpot; // A random spot from the above array
 
-    private bool playerInSight; //is the player inside of the enemies area of influence
+    public bool playerInSight; //is the player inside of the enemies area of influence
 
     void Start() {
 
@@ -53,16 +53,6 @@ public class BasicEnemyController : MonoBehaviour {
 
     }
 
-    void OnTriggerEnter2D(Collider2D collision) {
 
-        playerInSight = true;
-
-    }
-
-    void OnTriggerExit2D(Collider2D collision) {
-
-        playerInSight = false;
-
-    }
 
 }
