@@ -30,8 +30,10 @@ public class BulletProjectile : MonoBehaviour {
         if(hitInfo.collider != null) {
             if(hitInfo.collider.CompareTag("EnemyHitbox")) {
                 Debug.Log("ENEMY MUST TAKE DAMAGE!");
+                hitInfo.collider.GetComponent<Enemy>().TakeDamage(damage);
             }
             DestroyBulletProjectile();
+            
         }
 
 
