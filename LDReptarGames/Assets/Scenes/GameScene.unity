@@ -325,6 +325,10 @@ Prefab:
       propertyPath: m_Offset.y
       value: 0.04040861
       objectReference: {fileID: 0}
+    - target: {fileID: 1603770213376132, guid: 95ccd2bb9ac178f4c844bc651bf0170b, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95ccd2bb9ac178f4c844bc651bf0170b, type: 2}
   m_IsPrefabAsset: 0
@@ -818,7 +822,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &896897741
 GameObject:
@@ -1123,7 +1127,7 @@ GameObject:
   - component: {fileID: 1429973396}
   m_Layer: 9
   m_Name: Tilemap_Base
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6355,7 +6359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d8fd61badeada849921cb8680f58bd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: 5
+  playerHealth: 0
   speed: 2
 --- !u!70 &1814215678
 CapsuleCollider2D:
@@ -6450,7 +6454,7 @@ Transform:
   - {fileID: 2035096223}
   - {fileID: 1351466969}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2035096222
 GameObject:
@@ -6553,7 +6557,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2110347257
 GameObject:

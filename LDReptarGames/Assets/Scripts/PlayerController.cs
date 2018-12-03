@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
@@ -25,7 +26,10 @@ public class PlayerController : MonoBehaviour {
         moveVelocity = moveInput.normalized * speed; // Move the player according to the input above
         Debug.Log(moveVelocity);
         
-        
+        if (playerHealth <= 0) {
+            //load game over scene
+            SceneManager.LoadScene("GameOver");
+        }
 
     }
 
