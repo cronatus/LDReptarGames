@@ -113,6 +113,31 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &444751991 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1533816032507184, guid: fa338998c31c34a44b045eca6db64985,
+    type: 2}
+  m_PrefabInternal: {fileID: 676092652}
+--- !u!50 &444751992
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 444751991}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &445433840
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,7 +558,8 @@ Prefab:
       propertyPath: moveSpots.Array.data[5]
       value: 
       objectReference: {fileID: 1351466969}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 50964449326690550, guid: fa338998c31c34a44b045eca6db64985, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: fa338998c31c34a44b045eca6db64985, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &755665172

@@ -7,6 +7,8 @@ public class BasicEnemyController : MonoBehaviour {
     public float speed;     // The base speed of the enemy.
     private Transform playerPos;    // The position of the player in the game world.
 
+    private Rigidbody2D rb;
+
     private bool isDead; // To determine if the enemy is dead or alive.
 
     private float waitTime; //time left to wait before moving between positions in the patrol array
@@ -19,6 +21,7 @@ public class BasicEnemyController : MonoBehaviour {
 
     void Start() {
 
+        rb = GetComponent<Rigidbody2D>();
         playerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();   // locate the players sprite in the game
         randomSpot = Random.Range(0, moveSpots.Length); // choose a random spot from within the moveSpots array
 
@@ -28,13 +31,13 @@ public class BasicEnemyController : MonoBehaviour {
 
         if (playerInSight == true) {
 
-            transform.position = Vector2.MoveTowards(transform.position, playerPos.position, speed * Time.deltaTime); // if the player is within the enemies AOI move towards the player
+            rb.position = Vector2.MoveTowards(rb.position, playerPos.position, speed * Time.deltaTime); // if the player is within the enemies AOI move towards the player
 
         } else { // if the player isn't within the enemies AOI move between the locations in the moveSpots array
 
-            transform.position = Vector2.MoveTowards(transform.position, moveSpots[randomSpot].position, speed * Time.deltaTime);
+            rb.position = Vector2.MoveTowards(rb.position, moveSpots[randomSpot].position, speed * Time.deltaTime);
 
-            if (Vector2.Distance(transform.position, moveSpots[randomSpot].position) < 0.2) {
+            if (Vector2.Distance(rb.position, moveSpots[randomSpot].position) < 0.2) {
 
                 if (waitTime <= 0) {    // set the next position when the waitTime is at 0
 
