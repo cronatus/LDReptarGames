@@ -16,13 +16,20 @@ public class EnemyRadius : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collision) {
 
-        GetComponentInParent<BasicEnemyController>().playerInSight = true;
+        if (collision.CompareTag("Player")) {
 
+            GetComponentInParent<BasicEnemyController>().playerInSight = true;
+
+        }
     }
 
     void OnTriggerExit2D(Collider2D collision) {
 
-        GetComponentInParent<BasicEnemyController>().playerInSight = false;
+        if (collision.CompareTag("Player")) {
+
+            GetComponentInParent<BasicEnemyController>().playerInSight = false;
+
+        }
 
     }
 }

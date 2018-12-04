@@ -16,7 +16,7 @@ public class BossS1AttackBehaviour : StateMachineBehaviour {
 
         playerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         timer = Random.Range(minTime, maxTime);
-
+        speed = GameObject.Find("SlimeBoss").GetComponent<TutBossController>().speed;
 	
 	}
 

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class TutBossController : MonoBehaviour {
@@ -12,12 +13,16 @@ public class TutBossController : MonoBehaviour {
 
     public Slider healthBar;
     private Animator anim;
+    public float speed;
     public bool isDead;
+    private Rigidbody2D rb;
     
 
 	// Use this for initialization
 	void Start () {
 
+        speed = 0;
+        rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         bossHealth = maxBossHealth;
 
@@ -30,9 +35,12 @@ public class TutBossController : MonoBehaviour {
 
             anim.SetTrigger("stageTwo");
 
-        } else if (bossHealth <= 0) {
+        }
+        if (bossHealth <= 0) {
 
-            anim.SetTrigger("death");
+            //anim.SetTrigger("death");
+            Destroy(gameObject);
+            SceneManager.LoadScene("GameOver");
 
         }
 		
@@ -57,6 +65,19 @@ public class TutBossController : MonoBehaviour {
             }
 
         }
+
+    }
+
+    public void TakeDamage(int damage) {
+        bossHealth -= damage;
+    }
+
+    public void spawn() {
+
+        speed = 1;
+        //GetComponent<BossS1AttackBehaviour>().speed = 1;
+        rb.constraints = RigidbodyConstraints2D.None;
+        healthBar.gameObject.SetActive(true);
 
     }
 

@@ -8,6 +8,7 @@ TagManager:
   - Foreground
   - Enemy
   - EnemyHitbox
+  - SlimeBoss
   layers:
   - Default
   - TransparentFX

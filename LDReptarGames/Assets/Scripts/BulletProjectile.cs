@@ -32,10 +32,16 @@ public class BulletProjectile : MonoBehaviour {
                 Debug.Log("ENEMY MUST TAKE DAMAGE!");
                 hitInfo.collider.GetComponent<Enemy>().TakeDamage(damage);
             }
+
+            if (hitInfo.collider.CompareTag("SlimeBoss")) {
+
+                Debug.Log("BOSS MUST TAKE DAMAGE!");
+                hitInfo.collider.GetComponent<TutBossController>().TakeDamage(damage);
+
+            }
             DestroyBulletProjectile();
             
         }
-
 
         transform.Translate(Vector2.up * speed * Time.deltaTime);
     }
