@@ -18,6 +18,7 @@ public class BulletProjectile : MonoBehaviour {
     public LayerMask whatIsSolid;
 
     public GameObject destroyEffect;
+    public GameObject enemyHitSound;
 
 
     private void Start()
@@ -48,6 +49,7 @@ public class BulletProjectile : MonoBehaviour {
 
     void DestroyBulletProjectile() {
         Instantiate(destroyEffect, transform.position, Quaternion.identity);
+        Instantiate(enemyHitSound, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }

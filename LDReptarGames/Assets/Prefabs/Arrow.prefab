@@ -61,6 +61,8 @@ MonoBehaviour:
     m_Bits: 768
   destroyEffect: {fileID: 1161080540964010, guid: aff538086c9f50645b057f8c7a7d3de5,
     type: 2}
+  enemyHitSound: {fileID: 1530634062723946, guid: e63f409bb5f6fe54f917232b1cdb5fd2,
+    type: 2}
 --- !u!212 &212574416417665294
 SpriteRenderer:
   m_ObjectHideFlags: 1

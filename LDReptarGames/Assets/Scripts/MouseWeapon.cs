@@ -11,6 +11,8 @@ public class MouseWeapon : MonoBehaviour {
     public GameObject projectile;
     public Transform shotPoint;
 
+    public GameObject fireArrowSound;
+
     private float timeBetweenShots;
     public float startTimeBetweenShots; //set this in the inspector to roughly between .5 to 1 second
 
@@ -23,6 +25,7 @@ public class MouseWeapon : MonoBehaviour {
             if (Input.GetMouseButtonDown(0))
             {
                 Instantiate(projectile, shotPoint.position, transform.rotation);
+                Instantiate(fireArrowSound, transform.position, Quaternion.identity);
                 timeBetweenShots = startTimeBetweenShots;
             }
         }
