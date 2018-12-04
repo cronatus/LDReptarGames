@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//https://www.youtube.com/watch?v=bY4Hr2x05p8
+//Help provided with code from following link with MouseWeapon and BulletProjectile: https://www.youtube.com/watch?v=bY4Hr2x05p8
 
 public class MouseWeapon : MonoBehaviour {
 
