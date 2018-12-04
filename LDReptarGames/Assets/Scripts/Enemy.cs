@@ -14,7 +14,6 @@ public class Enemy : MonoBehaviour {
     public int health;
     public int damage;
     public GameObject deathEffect;
-    public GameObject enemyHitSound;
 
     private void Update() {
         if (health <= 0) {
@@ -32,8 +31,6 @@ public class Enemy : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D collision) {
 
         if (collision.CompareTag("Player")) {
-
-            Instantiate(enemyHitSound, transform.position, Quaternion.identity);
             collision.GetComponent<PlayerController>().playerHealth -= damage;
 
         }
